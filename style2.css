@@ -1,15 +1,37 @@
 body{
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Unkempt', cursive;
    margin: 20px;
 }
   
 
 /* Nav Bar */
-nav{
-   border: 2px solid black;
-   padding: 10px;
-   text-align:center;
+.first {
+    background: linear-gradient(#acd9d4, #f9ced0);
 }
+
+.first {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    height: 60px;  
+}
+
+.first ul {
+    margin-left: 470px; 
+    list-style: none; 
+}
+
+.first a {
+    text-decoration: none; 
+    padding-left: 45px; 
+    font-size: 20px; 
+    color:#fffafa; 
+}
+
+.first a:hover {
+    color: #f27f7d;
+}
+
 
 
 
