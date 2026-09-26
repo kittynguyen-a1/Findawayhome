@@ -1,0 +1,140 @@
+body {
+    background-color: #f1f6f9;
+    font-family: 'Unkempt', cursive;
+    margin: 0;
+}
+
+/* Navigation */
+.first {
+    background: linear-gradient(#acd9d4, #f9ced0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.first ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.first li {
+    display: flex;
+    gap: 45px;
+}
+
+.first a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fffafa;
+}
+
+.first a:hover {
+    color: #f27f7d;
+}
+
+
+/* Planets and Stars sections */
+.planets,
+.stars {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #acd9d4;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Hide checkboxes */
+#planets_toggle,
+#stars_toggle {
+    display: none;
+}
+
+/* Section titles */
+.planets label,
+.stars label {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #55a7e7;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hidden content */
+.planets_content,
+.stars_content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    color: #55a7e7;
+    line-height: 1.6;
+}
+
+/* Show content when checkbox is clicked */
+#planets_toggle:checked ~ .planets_content,
+#stars_toggle:checked ~ .stars_content {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 10px 20px 20px;
+}
+
+/* Images */
+.planets_img,
+.stars_img {
+    display: block;
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px auto 25px;
+    border-radius: 15px;
+}
+
+/* Paragraphs */
+.planets_content p,
+.stars_content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .first {
+        height: auto;
+        padding: 15px;
+    }
+
+    .first li {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .first a {
+        font-size: 18px;
+    }
+
+    .planets,
+    .stars {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .planets label,
+    .stars label {
+        font-size: 26px;
+    }
+
+    .planets_content p,
+    .stars_content p {
+        font-size: 16px;
+    }
+
+    .planets_img,
+    .stars_img {
+        width: 90%;
+    }
+}
